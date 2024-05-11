@@ -4,13 +4,26 @@ using UnityEngine;
 
 public class EnemyProjectileSpawn : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public Transform spawnPos;
+    public GameObject enemyProj;
+
+
     void Start()
     {
-        
+        StartCoroutine(FireProjectile(enemyProj));
     }
 
-    // Update is called once per frame
+    IEnumerator FireProjectile(GameObject projName)
+    {
+        while (true)
+        {
+            Instantiate(projName, spawnPos.transform.position, spawnPos.transform.rotation);
+            yield return new WaitForSeconds(0.3f);
+        }
+
+
+    }
+
     void Update()
     {
         

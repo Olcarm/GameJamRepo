@@ -7,10 +7,10 @@ public class PlayerProjectiles : MonoBehaviour
     public GameObject proj1;
     public Transform spawnPos;
     
+    
     void Start()
     {
         StartCoroutine(FireProjectile(proj1));
-
     }
 
     // Update is called once per frame

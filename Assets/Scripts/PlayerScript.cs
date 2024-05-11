@@ -12,6 +12,7 @@ public class PlayerScript : MonoBehaviour
 
     public float xRange;
     public float yRange;
+    public float health;
 
     // Start is called before the first frame update
     void Start()

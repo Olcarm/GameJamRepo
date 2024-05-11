@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ProjectileMovement : MonoBehaviour
+public class EnemyProjectile : MonoBehaviour
 {
     private Rigidbody rb;
     [SerializeField] public float projSpeed;
@@ -10,19 +10,19 @@ public class ProjectileMovement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        rb.velocity = transform.right * projSpeed;
+        rb.velocity = -transform.right * projSpeed;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(gameObject.transform.position.x > 12f)
+        if (gameObject.transform.position.x > 12f)
         {
             Destroy(this.gameObject);
         }
-        
+
         RotateProjectile();
-        
+
     }
     void RotateProjectile()
     {
@@ -32,9 +32,9 @@ public class ProjectileMovement : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "Enemy")
+        if (other.gameObject.tag == "Player")
         {
-            other.GetComponent<Enemy1>().TakeDamage(damage);
+            other.GetComponent<PlayerScript>().TakeDamage(damage);
             Destroy(this.gameObject);
         }
     }

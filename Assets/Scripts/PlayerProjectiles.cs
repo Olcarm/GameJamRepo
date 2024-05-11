@@ -18,6 +18,7 @@ public class PlayerProjectiles : MonoBehaviour
     {
         
     }
+
     IEnumerator FireProjectile(GameObject projName)
     {
         while (true)

@@ -29,7 +29,7 @@ public class PlayerScript : MonoBehaviour
         transform.Translate(Vector3.forward * speed*horizontalInput * Time.deltaTime);
 
         verticalInput = Input.GetAxis("Vertical");
-        transform.Translate(Vector3.up * speed*verticalInput * Time.deltaTime);
+        transform.Translate(Vector3.up * speed* verticalInput * Time.deltaTime);
 
 
         if(transform.position.x > xRange)

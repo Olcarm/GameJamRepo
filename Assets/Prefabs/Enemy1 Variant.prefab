@@ -100,6 +100,26 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1543459587089425451, guid: 1046b647fb0f6744a853afce076f55fc, type: 3}
+      propertyPath: m_Size.y
+      value: 21.275967
+      objectReference: {fileID: 0}
+    - target: {fileID: 1543459587089425451, guid: 1046b647fb0f6744a853afce076f55fc, type: 3}
+      propertyPath: m_Size.z
+      value: 37.439556
+      objectReference: {fileID: 0}
+    - target: {fileID: 1543459587089425451, guid: 1046b647fb0f6744a853afce076f55fc, type: 3}
+      propertyPath: m_Center.x
+      value: -0.000001869627
+      objectReference: {fileID: 0}
+    - target: {fileID: 1543459587089425451, guid: 1046b647fb0f6744a853afce076f55fc, type: 3}
+      propertyPath: m_Center.y
+      value: 5.544342
+      objectReference: {fileID: 0}
+    - target: {fileID: 1543459587089425451, guid: 1046b647fb0f6744a853afce076f55fc, type: 3}
+      propertyPath: m_Center.z
+      value: 1.2856789
+      objectReference: {fileID: 0}
+    - target: {fileID: 1543459587089425451, guid: 1046b647fb0f6744a853afce076f55fc, type: 3}
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
@@ -136,7 +156,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 0
   maxHealth: 10
-  speed: 5
+  speed: 1
   yRange: 0
 --- !u!114 &96532074577143869
 MonoBehaviour:
@@ -151,7 +171,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPos: {fileID: 6431312466114026568}
-  enemyProj: {fileID: 7055808593342727847, guid: 2de3a456bd3f7e445a6801e2ae8cb26a, type: 3}
+  enemyProj: {fileID: 9010446033262179550, guid: 13b1715ea6bc17f428805f81872a2e2e, type: 3}
 --- !u!4 &2220571949254804054 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 586197542472132836, guid: 1046b647fb0f6744a853afce076f55fc, type: 3}

@@ -10,7 +10,7 @@ public class ProjectileMovement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        rb.velocity = transform.right * projSpeed;
+        rb.velocity = transform.forward * projSpeed;
     }
 
     // Update is called once per frame
@@ -20,15 +20,9 @@ public class ProjectileMovement : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
-        
-        RotateProjectile();
-        
-    }
-    void RotateProjectile()
-    {
 
-        transform.Rotate(new Vector3(Random.Range(-5, 5), Random.Range(-5, 5), Random.Range(-5, 5)) * 100f * Time.deltaTime, Space.Self);
     }
+
 
     private void OnTriggerEnter(Collider other)
     {

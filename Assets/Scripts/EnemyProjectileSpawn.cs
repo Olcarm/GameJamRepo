@@ -17,8 +17,8 @@ public class EnemyProjectileSpawn : MonoBehaviour
     {
         while (true)
         {
-            Instantiate(projName, spawnPos.transform.position, spawnPos.transform.rotation);
-            yield return new WaitForSeconds(0.3f);
+            Instantiate(projName, spawnPos.transform.position, Quaternion.identity);
+            yield return new WaitForSeconds(0.6f);
         }
 
 

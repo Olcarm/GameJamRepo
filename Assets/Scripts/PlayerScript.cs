@@ -48,4 +48,12 @@ public class PlayerScript : MonoBehaviour
             transform.position = new Vector3(transform.position.x, -yRange, transform.position.z);
         }
     }
+    public void TakeDamage(float damageTaken)
+    {
+        health -= damageTaken;
+        if(health <= 0)
+        {
+            Destroy(this.gameObject);
+        }
+    }
 }

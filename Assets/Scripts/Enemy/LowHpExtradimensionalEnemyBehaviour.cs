@@ -47,8 +47,8 @@ public class LowHpExtradimensionalEnemyBehaviour : BaseEnemy
                         
         }
 
-      
-        
+        ShootProjectile();
+       
         
     }
 

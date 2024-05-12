@@ -28,7 +28,7 @@ public class ProjectileMovement : MonoBehaviour
     {
         if(other.gameObject.tag == "Enemy")
         {
-            other.GetComponent<Enemy1>().TakeDamage(damage);
+            other.GetComponent<BaseEnemy>().TakeDamage(damage);
             Destroy(this.gameObject);
         }
     }

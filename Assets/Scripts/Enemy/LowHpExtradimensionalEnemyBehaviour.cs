@@ -33,7 +33,7 @@ public class LowHpExtradimensionalEnemyBehaviour : BaseEnemy
             
         
 
-        MoveToPoint(transform.position,Points[i],1);
+        MoveToPoint(transform.position,Points[i],speed);
         
 
         if((Points[i] - transform.position).sqrMagnitude < 0.5 )

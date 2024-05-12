@@ -10,7 +10,7 @@ public class ProjectileMovement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        rb.velocity = transform.forward * projSpeed;
+        rb.velocity = transform.forward * -projSpeed;
     }
 
     // Update is called once per frame

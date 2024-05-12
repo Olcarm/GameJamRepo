@@ -10,20 +10,27 @@ public class Wave1 : WaveSpawnerSystem
     public float wave2spawntime = 2f;
 
 
-void Start()
-{
-    StartCoroutine(WaitAndSpawn(3.0f));
-}
 
 
-IEnumerator WaitAndSpawn(float waitTime)
-{
+    public enum levelSelector{wave1,wave2,wave3};
+    public levelSelector mylevel;
+    
 
-    while(true){
 
-    spawnEnemies(1,1);
+    void Start()
+    {
+        mylevel = levelSelector.wave1;
+    }
 
-    yield return new WaitForSeconds(waitTime);
+
+    void FixedUpdate()
+    {
+    if(GameObject.FindGameObjectsWithTag("Enemy") == null){
+
+        spawnEnemies(1,2);
+
+
+    }
     }
     
 
@@ -38,4 +45,6 @@ IEnumerator WaitAndSpawn(float waitTime)
 
 
 
-}
+
+
+

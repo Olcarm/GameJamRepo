@@ -8,10 +8,18 @@ public class WaveSpawnerSystem : MonoBehaviour
     public GameObject[] Race1Enemies;
     public GameObject[] Race2Enemies;
 
-    private Vector3 SpawnPoint = new Vector3(0,0,6);
+    public GameObject SpawnPointsObject;
+  
 
 
-
+    public Vector3[] ConvertPoints(){
+        int i = SpawnPointsObject.transform.childCount;
+        Vector3[] Points = new Vector3[i];
+        for(int j = 0;j!=i;j++){
+            Points[j] = SpawnPointsObject.transform.GetChild(j).transform.position;
+        }
+        return Points;
+    }
 
 
     private GameObject[] CreateEnemyPool(int race,int size){
@@ -28,14 +36,11 @@ public class WaveSpawnerSystem : MonoBehaviour
             }
             else{
                 
-                if(Random.Range(0,1)==1){
-                    Debug.Log(EnemyPool[i]);
-                    EnemyPool[i] = Race1Enemies[Random.Range(0,size)];
-
+                if(Random.Range(0,2)==0){
+                    EnemyPool[i] = Race1Enemies[Random.Range(0,Race1Enemies.Length)];
                 }
                 else{
-                    Debug.Log(EnemyPool[i]);
-                    EnemyPool[i] = Race2Enemies[Random.Range(0,size)];
+                    EnemyPool[i] = Race2Enemies[Random.Range(0,Race2Enemies.Length)];
                 }
                 
             }
@@ -48,30 +53,25 @@ public class WaveSpawnerSystem : MonoBehaviour
 
     public void spawnEnemies(int race,int size){
 
+        Vector3[] spawnpoints = ConvertPoints();
+
         GameObject[] Enemies = CreateEnemyPool(race,size);
         
         for(int i = 0; i <= Enemies.Length-1 ; i++)
         {
-            Debug.Log(Enemies.Length);
+            
 
-            Instantiate(Enemies[i], SpawnPoint, Quaternion.identity);
+            Instantiate(Enemies[i], spawnpoints[Random.Range(0,spawnpoints.Length-1)], Quaternion.identity);
 
 
 
         }
 
-
-
     }
 
 
 
-    void Start()
-    {
-        
-        spawnEnemies(0,5);
-    }
-
+ 
 
 
 

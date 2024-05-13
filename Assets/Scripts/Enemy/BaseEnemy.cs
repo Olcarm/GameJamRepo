@@ -28,6 +28,7 @@ public class BaseEnemy : MonoBehaviour
 
 
     public Vector3[] ConvertPoints(){
+
         int i = PointsObject.transform.childCount;
         Vector3[] Points = new Vector3[i];
         for(int j = 0;j!=i;j++){

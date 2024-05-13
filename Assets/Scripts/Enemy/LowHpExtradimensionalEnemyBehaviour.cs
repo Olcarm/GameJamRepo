@@ -15,10 +15,10 @@ public class LowHpExtradimensionalEnemyBehaviour : BaseEnemy
     public LowHpExtradimensionalEnemyBehaviour() : base() 
     {}
 
- 
+
     void Start()
     {
-
+       PointsObject = GameObject.FindGameObjectWithTag("MovePoints");
        Points = ConvertPoints();
 
 

@@ -60,10 +60,7 @@ public class WaveSpawnerSystem : MonoBehaviour
         for(int i = 0; i <= Enemies.Length-1 ; i++)
         {
             
-
             Instantiate(Enemies[i], spawnpoints[Random.Range(0,spawnpoints.Length-1)], Quaternion.identity);
-
-
 
         }
 

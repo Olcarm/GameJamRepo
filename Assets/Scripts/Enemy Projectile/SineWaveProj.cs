@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SineWaveProj : MonoBehaviour
+public class SineWaveProj : EnemyProjectile
 {
     public float MoveSpeed = 5.0f;
 
@@ -24,5 +24,7 @@ public class SineWaveProj : MonoBehaviour
     {
         pos += -transform.right * Time.deltaTime * MoveSpeed;
         transform.position = pos + axis * Mathf.Sin(Time.time * frequency) * magnitude;
+        CheckDestroy();
     }
+    
 }

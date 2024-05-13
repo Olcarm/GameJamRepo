@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 950086575002400975}
+  - component: {fileID: 4701503361425638597}
   m_Layer: 0
   m_Name: BossBulletSpawner
   m_TagString: Untagged
@@ -31,6 +32,25 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6467562986644717270}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4701503361425638597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2574086429344189447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abff60499d2a87e449c821a299a37add, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet1: {fileID: 5871543319007851596, guid: 96d7b699799f3f8429b76b295e1a9a4c, type: 3}
+  bullet2: {fileID: 4887420877077507535, guid: 8ad1f9b8b60755d4ea84f10b31c7017b, type: 3}
+  bulSpawnPos: {fileID: 950086575002400975}
+  bulSpawnCount: 8
+  startAngle: -90
+  endAngle: 90
+  currentAngle: 0
 --- !u!1001 &3229585703958183039
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -93,7 +113,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9105009608644565011, guid: ae1f247a669714548af148db975f40bc, type: 3}
       propertyPath: m_Name
-      value: BlueBoss Variant
+      value: BlueBoss
+      objectReference: {fileID: 0}
+    - target: {fileID: 9105009608644565011, guid: ae1f247a669714548af148db975f40bc, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -101,8 +125,33 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8435432675090055849, guid: ae1f247a669714548af148db975f40bc, type: 3}
       insertIndex: -1
       addedObject: {fileID: 950086575002400975}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 9105009608644565011, guid: ae1f247a669714548af148db975f40bc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 9118526870838741141}
   m_SourcePrefab: {fileID: 100100000, guid: ae1f247a669714548af148db975f40bc, type: 3}
+--- !u!1 &5947767372287599724 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9105009608644565011, guid: ae1f247a669714548af148db975f40bc, type: 3}
+  m_PrefabInstance: {fileID: 3229585703958183039}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &9118526870838741141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5947767372287599724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a4d158184dcb164791412a73a438dbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Hp: 110
+  dmg: 210
+  speed: 1
+  AttackSpeed: 3
+  PointsObject: {fileID: 0}
 --- !u!4 &6467562986644717270 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8435432675090055849, guid: ae1f247a669714548af148db975f40bc, type: 3}

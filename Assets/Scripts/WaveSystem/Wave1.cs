@@ -36,6 +36,7 @@ public class Wave1 : WaveSpawnerSystem
 
 }
 
+<<<<<<< Updated upstream
 
 
 
@@ -48,3 +49,6 @@ public class Wave1 : WaveSpawnerSystem
 
 
 
+=======
+}
+>>>>>>> Stashed changes

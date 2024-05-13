@@ -64,6 +64,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Weapon 2
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 04c30381dd64d2e4bac1367f20e069f8, type: 3}
+      propertyPath: m_TagString
+      value: PlayerProjectile
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -57,6 +57,7 @@ public class Enemy1 : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
+
     public float evaluate(float x)
     {
         return 0.5f * Mathf.Sin(x - Mathf.PI / 2f) + 0.5f;

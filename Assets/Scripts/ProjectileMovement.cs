@@ -22,7 +22,7 @@ public class ProjectileMovement : MonoBehaviour
         }
 
     }
-
+    
 
     private void OnTriggerEnter(Collider other)
     {

@@ -20,7 +20,7 @@ public class LowHpExtradimensionalEnemyBehaviour : BaseEnemy
     {
        PointsObject = GameObject.FindGameObjectWithTag("MovePoints");
        Points = ConvertPoints();
-
+       i = Random.Range(0, Points.Length);
 
 
     }
@@ -36,14 +36,15 @@ public class LowHpExtradimensionalEnemyBehaviour : BaseEnemy
         MoveToPoint(transform.position,Points[i],speed);
         
 
-        if((Points[i] - transform.position).sqrMagnitude < 0.5 )
+        if ((Points[i] - transform.position).sqrMagnitude < 0.5 )
         {
-            i++;
+            i = Random.Range(0, Points.Length);
+            //i++;
 
-            if(i>=Points.Length)
-            {
-                i = 0;
-            }
+            //if(i>=Points.Length)
+            //{
+            //    i = 0;
+            //}
                         
         }
 

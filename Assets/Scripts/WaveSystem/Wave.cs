@@ -8,12 +8,28 @@ public class Wave : ScriptableObject
 {
 
     [field: SerializeField]
-    public GameObject[] EnemiesInWave { get; private set; }
+    public GameObject[] BlueEnemiesInWave { get; private set; }
+    
+    [field: SerializeField]
+    public int[] BlueEnemyCosts { get; private set; }
+
+    [field: SerializeField]
+    public GameObject[] RedEnemiesInWave { get; private set; }
+
+    [field: SerializeField]
+    public int[] RedEnemyCosts { get; set; }
 
     [field: SerializeField]
     public float TimeBeforeThisWave { get; private set; }
 
     [field: SerializeField]
-    public float NumbertToSpawn { get; private set; }
+    public float EnemyTotalCost;
+
+    public float TotalCost
+    {
+        get { return EnemyTotalCost; }
+        set { EnemyTotalCost = value; }
+    }
+    
 
 }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 [CreateAssetMenu]
 public class GameDifficulty : ScriptableObject
@@ -11,6 +12,8 @@ public class GameDifficulty : ScriptableObject
 
     [SerializeField]
     private float redState;
+    [SerializeField]
+    private float currentEnemy;
 
     public float Blue
 	{
@@ -22,5 +25,9 @@ public class GameDifficulty : ScriptableObject
         get { return redState; }
         set { redState = value; }
     }
-
+    public float CurrentEnemy
+    {
+        get { return currentEnemy; }
+        set { currentEnemy = value; }
+    }
 }

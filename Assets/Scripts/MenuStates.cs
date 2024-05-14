@@ -11,15 +11,17 @@ public class MenuStates : MonoBehaviour
 
     [SerializeField]
     private GameDifficulty gameDifficulty;
-    void Start()
-    {
-        
-    }
-
     
     void Update()
     {
-        blueText.text = gameDifficulty.Blue + "";
-        redText.text = gameDifficulty.Red + "";
+        
+    }
+    public void SetEnemytoBlue()
+    {
+        gameDifficulty.CurrentEnemy = 0;
+    }
+    public void SetEnemytoRed()
+    {
+        gameDifficulty.CurrentEnemy = 1;
     }
 }

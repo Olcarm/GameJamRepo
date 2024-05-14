@@ -860,53 +860,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 591853650}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1540554999
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1540555001}
-  - component: {fileID: 1540555000}
-  m_Layer: 0
-  m_Name: State
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1540555000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1540554999}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1df9232a1163a3744bc3f5a1529ff54a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  blueText: {fileID: 0}
-  redText: {fileID: 0}
-  gameDifficulty: {fileID: 11400000, guid: e48d3c1229c57e947bd2889108dc25dd, type: 2}
---- !u!4 &1540555001
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1540554999}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 303.5894, y: 198.07663, z: 41.113705}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1590336225
 GameObject:
   m_ObjectHideFlags: 0
@@ -956,13 +909,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waves:
   - {fileID: 11400000, guid: 0bcea04aee4903945aa9e31b9a3b3320, type: 2}
-  - {fileID: 11400000, guid: bf94dfcf7cc7b444b99f24a7ae508669, type: 2}
-  - {fileID: 11400000, guid: f0338b7cd39719d479c92894b538d9e1, type: 2}
-  - {fileID: 11400000, guid: cb0f1d0cf5875e84bb117913d3c2649c, type: 2}
   spawnpoints:
   - {fileID: 1691594675}
   - {fileID: 645110977}
   - {fileID: 1720897419}
+  difficulty: {fileID: 11400000, guid: e48d3c1229c57e947bd2889108dc25dd, type: 2}
+  blueEnemyTotalCost: 0
+  redEnemyTotalCost: 0
 --- !u!1 &1691594674
 GameObject:
   m_ObjectHideFlags: 0
@@ -1101,6 +1054,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 8694930481409963043, guid: 33bf082471415bf49b308b392afe62d1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1123,4 +1080,3 @@ SceneRoots:
   - {fileID: 679114879}
   - {fileID: 591853650}
   - {fileID: 1590336226}
-  - {fileID: 1540555001}

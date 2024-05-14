@@ -11,7 +11,7 @@ public class RoundProjectile : EnemyProjectile
     {
         rb = GetComponent<Rigidbody>();
         rb.velocity = -transform.right * projSpeed;
-        RotateProjectile();
+        
     }
 
 
@@ -19,5 +19,6 @@ public class RoundProjectile : EnemyProjectile
     void Update()
     {
         CheckDestroy();
+        RotateProjectile();
     }
 }

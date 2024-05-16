@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyProjectile : MonoBehaviour
 {
     [SerializeField] public float projSpeed;
-    public float damage = 2f;
+    public float damage;
 
     public void CheckDestroy()
     {

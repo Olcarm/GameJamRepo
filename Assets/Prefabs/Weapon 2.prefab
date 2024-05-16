@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projSpeed: 20
-  damage: 10
+  playerStats: {fileID: 11400000, guid: ea7703fff7307744284c0612789c0d0c, type: 2}
 --- !u!54 &-6072344706651341205
 Rigidbody:
   m_ObjectHideFlags: 0

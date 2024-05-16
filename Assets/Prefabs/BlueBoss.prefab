@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abff60499d2a87e449c821a299a37add, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet1: {fileID: 5871543319007851596, guid: 96d7b699799f3f8429b76b295e1a9a4c, type: 3}
+  bullet1: {fileID: 7286952459526235349, guid: 1739feea6db2b394abf6eb1257c38409, type: 3}
   bullet2: {fileID: 4887420877077507535, guid: 8ad1f9b8b60755d4ea84f10b31c7017b, type: 3}
   bulSpawnPos: {fileID: 950086575002400975}
   bulSpawnCount: 8
@@ -61,15 +61,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8435432675090055849, guid: ae1f247a669714548af148db975f40bc, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.1
+      value: 0.06
       objectReference: {fileID: 0}
     - target: {fileID: 8435432675090055849, guid: ae1f247a669714548af148db975f40bc, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.1
+      value: 0.06
       objectReference: {fileID: 0}
     - target: {fileID: 8435432675090055849, guid: ae1f247a669714548af148db975f40bc, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.1
+      value: 0.06
       objectReference: {fileID: 0}
     - target: {fileID: 8435432675090055849, guid: ae1f247a669714548af148db975f40bc, type: 3}
       propertyPath: m_LocalPosition.x
@@ -147,11 +147,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a4d158184dcb164791412a73a438dbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Hp: 110
-  dmg: 210
+  health: 10
+  damage: 2
   speed: 1
   AttackSpeed: 3
   PointsObject: {fileID: 0}
+  lowEnemy: {fileID: 0}
 --- !u!4 &6467562986644717270 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8435432675090055849, guid: ae1f247a669714548af148db975f40bc, type: 3}

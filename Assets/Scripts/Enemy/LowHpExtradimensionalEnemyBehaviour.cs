@@ -8,8 +8,8 @@ public class LowHpExtradimensionalEnemyBehaviour : BaseEnemy
     private Vector3[] Direction = new [] { new Vector3(0,4,7),new Vector3(0,1,-7),new Vector3(0,6,3),new Vector3(0,-6,6)};
 
     private int i = 0;
-    private Vector3[] Points; 
-    
+    private Vector3[] Points;
+    public EnemyScriptable lowEnemy;
 
    
     public LowHpExtradimensionalEnemyBehaviour() : base() 
@@ -21,13 +21,13 @@ public class LowHpExtradimensionalEnemyBehaviour : BaseEnemy
        PointsObject = GameObject.FindGameObjectWithTag("MovePoints");
        Points = ConvertPoints();
        i = Random.Range(0, Points.Length);
-
+       health = lowEnemy.health;
 
     }
 
 
 
-    // Update is called once per frame
+    
     void FixedUpdate()
     {
             
@@ -38,17 +38,8 @@ public class LowHpExtradimensionalEnemyBehaviour : BaseEnemy
 
         if ((Points[i] - transform.position).sqrMagnitude < 0.5 )
         {
-            i = Random.Range(0, Points.Length);
-            //i++;
-
-            //if(i>=Points.Length)
-            //{
-            //    i = 0;
-            //}
-                        
+            i = Random.Range(0, Points.Length);       
         }
-
-        ShootProjectile();
        
         
     }

@@ -5,8 +5,7 @@ using UnityEngine;
 public class BaseEnemy : MonoBehaviour
 {
 
-    public float Hp = 10;
-    public int dmg = 2;
+    public float health;
     public float speed = 3;
     public float AttackSpeed = 3;
 
@@ -14,10 +13,6 @@ public class BaseEnemy : MonoBehaviour
 
     public GameObject PointsObject;
     
-  
-
-
-
 
     public void MoveToPoint(Vector3 CurrentPosition, Vector3 Destination, float speed){
         transform.position = Vector3.Slerp(CurrentPosition,Destination,speed*Time.deltaTime);
@@ -40,24 +35,13 @@ public class BaseEnemy : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
-        Hp -= damage;
-        if(Hp<=0)
+        health -= damage;
+        if(health<=0)
         {
             Destroy(gameObject);
-
         }
         
         
-    }
-
-
-    public void ShootProjectile()
-    {
-
-      //  Debug.Log("projectile Launched");
-
-
-
     }
 
 

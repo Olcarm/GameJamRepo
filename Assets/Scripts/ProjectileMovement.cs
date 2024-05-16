@@ -6,23 +6,21 @@ public class ProjectileMovement : MonoBehaviour
 {
     private Rigidbody rb;
     [SerializeField] public float projSpeed;
-    public float damage = 2f;
+    private float damage;
+    public Player playerStats;
     void Start()
     {
+        damage = playerStats.damage;
         rb = GetComponent<Rigidbody>();
         rb.velocity = transform.forward * -projSpeed;
+        
+        Destroy(this.gameObject, 10);
     }
-
-    // Update is called once per frame
-    void Update()
+    private void Awake()
     {
-        if(gameObject.transform.position.x > 12f)
-        {
-            Destroy(this.gameObject);
-        }
-
+        
+        
     }
-    
 
     private void OnTriggerEnter(Collider other)
     {

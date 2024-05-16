@@ -123,6 +123,10 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1759143097630839691, guid: 1046b647fb0f6744a853afce076f55fc, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -155,7 +159,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPos: {fileID: 6431312466114026568}
-  enemyProj: {fileID: 5871543319007851596, guid: 96d7b699799f3f8429b76b295e1a9a4c, type: 3}
+  enemyProj: {fileID: 7286952459526235349, guid: a62a619b918ce4b4385465e1ffbddab2, type: 3}
 --- !u!114 &6497384051526116854
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -168,11 +172,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a4d158184dcb164791412a73a438dbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Hp: 10
-  dmg: 2
+  health: 10
+  damage: 2
   speed: 1
   AttackSpeed: 3
   PointsObject: {fileID: 0}
+  lowEnemy: {fileID: 11400000, guid: 4d140be88efe35f44a1e652735656ca6, type: 2}
 --- !u!4 &2220571949254804054 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 586197542472132836, guid: 1046b647fb0f6744a853afce076f55fc, type: 3}

@@ -2,8 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
-
-[CreateAssetMenu]
+[CreateAssetMenu(fileName = "Wave", menuName = "ScriptableObjects/Difficulty", order = 3)]
 public class GameDifficulty : ScriptableObject
 {
 

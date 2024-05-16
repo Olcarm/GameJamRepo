@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7a66e84dfae3c3429949ca657e04040, type: 3}
   m_Name: Difficulty
   m_EditorClassIdentifier: 
-  blueState: -3
+  blueState: -4
   redState: 4
   currentEnemy: 0

@@ -1,32 +1,33 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro.EditorUtilities;
+using UnityEditorInternal;
 using UnityEngine;
 
 public class PlayerProjectiles : MonoBehaviour
 {
     public GameObject proj1;
     public Transform spawnPos;
-    
+    public Player playerStats;
+    private float attackRate;
     
     void Start()
     {
-        StartCoroutine(FireProjectile(proj1));
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
+        attackRate = playerStats.attackRate;
+        StartCoroutine(FireProjectile(proj1, attackRate));
         
     }
 
-    IEnumerator FireProjectile(GameObject projName)
+    IEnumerator FireProjectile(GameObject projName, float attackRate)
     {
         while (true)
         {
+            AudioManager.Instance.PlaySFX("PlayerAttack");
             Instantiate(projName, spawnPos.transform.position, spawnPos.transform.rotation);
-            yield return new WaitForSeconds(0.3f);
+            
+            yield return new WaitForSeconds(1/attackRate);
         }
-        
-
     }
+
 }
+

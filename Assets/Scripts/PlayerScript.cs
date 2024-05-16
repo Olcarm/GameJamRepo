@@ -6,18 +6,22 @@ using UnityEngine;
 public class PlayerScript : MonoBehaviour
 {
 
-    public float speed;
+    private float speed;
     float horizontalInput;
     float verticalInput;
 
     public float xRange;
     public float yRange;
     public float health;
-    public float maxHealth;
+    private float maxHealth;
 
+    [SerializeField]
+    private Player playerStats;
     // Start is called before the first frame update
     void Start()
     {
+        maxHealth = playerStats.health;
+        speed = playerStats.speed;
         health = maxHealth;
     }
 
@@ -51,7 +55,7 @@ public class PlayerScript : MonoBehaviour
     }
     public void TakeDamage(float damageTaken)
     {
-        health -= damageTaken;
+        playerStats.health -= damageTaken;
         if(health <= 0)
         {
             Destroy(this.gameObject);

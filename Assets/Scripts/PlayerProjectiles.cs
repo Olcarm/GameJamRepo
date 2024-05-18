@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro.EditorUtilities;
-using UnityEditorInternal;
 using UnityEngine;
 
 public class PlayerProjectiles : MonoBehaviour

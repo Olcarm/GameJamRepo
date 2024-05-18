@@ -71,7 +71,7 @@ public class InGameMenuScript : MonoBehaviour
     {
         if(difficulty.CurrentEnemy == 0)
         {
-            if(difficulty.Blue > -4)
+            if(difficulty.Blue > -4 && difficulty.Blue != 0)
             {
                 difficulty.Blue += 1;
             }
@@ -82,7 +82,7 @@ public class InGameMenuScript : MonoBehaviour
         }
         else
         {
-            if(difficulty.Red > -4)
+            if(difficulty.Red > -4 && difficulty.Red != 0)
             {
                 difficulty.Red += 1;
             }
@@ -97,24 +97,33 @@ public class InGameMenuScript : MonoBehaviour
     {
         if (difficulty.CurrentEnemy == 0)
         {
-            if (difficulty.Blue > -4)
+            if (difficulty.Blue > -5)
             {
                 difficulty.Blue -= 1;
+                
             }
-            if (difficulty.RedPower < 4 && difficulty.RedPower != 0)
+            if (difficulty.RedPower < 4)
             {
-                difficulty.RedPower -= 1;
+                difficulty.RedPower += 1;
+            }
+            if( difficulty.BluePower < 4)
+            {
+                difficulty.BluePower -= 1;
             }
         }
         else
         {
-            if (difficulty.Red > -4)
+            if (difficulty.Red > -5)
             {
                 difficulty.Red -= 1;
             }
-            if (difficulty.BluePower < 4 && difficulty.BluePower != 0)
+            if (difficulty.BluePower < 4)
             {
-                difficulty.BluePower -= 1;
+                difficulty.BluePower += 1;
+            }
+            if(difficulty.RedPower < 4)
+            {
+                difficulty.RedPower -= 1;
             }
         }
         SceneManager.LoadScene("Menu");

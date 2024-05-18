@@ -17,5 +17,5 @@ MonoBehaviour:
   availablePoints: 0
   health: 100
   damage: 10
-  speed: 5
-  attackRate: 5
+  speed: 3
+  attackRate: 3

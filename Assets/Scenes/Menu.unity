@@ -2213,7 +2213,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 770579386}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 218511469}
+        m_TargetAssemblyTypeName: MainMenuScript, Assembly-CSharp
+        m_MethodName: ExitGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &770579386
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4665,6 +4677,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blueText: {fileID: 701584845}
   redText: {fileID: 1343624923}
+  blueButton: {fileID: 1028176072}
+  redButton: {fileID: 562047227}
   gameDifficulty: {fileID: 11400000, guid: e48d3c1229c57e947bd2889108dc25dd, type: 2}
 --- !u!1 &1418791285
 GameObject:

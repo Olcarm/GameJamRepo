@@ -17,7 +17,10 @@ MonoBehaviour:
   - {fileID: 5947767372287599724, guid: a92cd752373887d48a768faccbf1db16, type: 3}
   - {fileID: 8821584396723112138, guid: 168b045fe6d547e408b17001062e67c7, type: 3}
   <BlueEnemyCosts>k__BackingField: 01000000050000000a000000
-  <RedEnemiesInWave>k__BackingField: []
-  <RedEnemyCosts>k__BackingField: 
+  <RedEnemiesInWave>k__BackingField:
+  - {fileID: 5232269688741265615, guid: 7ac720e40233fb54587e4b1b516b39fd, type: 3}
+  - {fileID: 4293006145317781966, guid: b64035a3eb7cc7543bdc1364327a119d, type: 3}
+  - {fileID: 7605697785181008853, guid: b06992a08dbb56949a17c7a12f36fdbe, type: 3}
+  <RedEnemyCosts>k__BackingField: 01000000050000000a000000
   <TimeBeforeThisWave>k__BackingField: 20
-  EnemyTotalCost: 20
+  EnemyTotalCost: 30

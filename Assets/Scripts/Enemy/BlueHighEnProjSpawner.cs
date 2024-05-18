@@ -11,9 +11,6 @@ public class BlueHighEnProjSpawner : MonoBehaviour
     [SerializeField]
     private float fireRate;
 
-    private int bulSpawnCount = 8;
-    [SerializeField]
-    private float startAngle = -90f, endAngle = 90f, currentAngle;
 
     void Start()
     {

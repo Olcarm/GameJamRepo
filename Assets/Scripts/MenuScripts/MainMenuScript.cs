@@ -46,5 +46,10 @@ public class MainMenuScript : MonoBehaviour
     {
         BackToMain();
         SceneManager.LoadScene("GameScene");
+        Time.timeScale = 1;
+    }
+    public void ExitGame()
+    {
+        Application.Quit();
     }
 }

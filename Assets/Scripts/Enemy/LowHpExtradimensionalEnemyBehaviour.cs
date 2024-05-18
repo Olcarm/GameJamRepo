@@ -25,14 +25,8 @@ public class LowHpExtradimensionalEnemyBehaviour : BaseEnemy
 
     }
 
-
-
-    
     void FixedUpdate()
     {
-            
-        
-
         MoveToPoint(transform.position,Points[i],speed);
         
 

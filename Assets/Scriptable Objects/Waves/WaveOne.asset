@@ -19,4 +19,4 @@ MonoBehaviour:
   - {fileID: 5947767372287599724, guid: a92cd752373887d48a768faccbf1db16, type: 3}
   <RedEnemyCosts>k__BackingField: 05000000
   <TimeBeforeThisWave>k__BackingField: 2
-  EnemyTotalCost: 100
+  EnemyTotalCost: 10

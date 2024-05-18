@@ -148,11 +148,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 10
-  damage: 2
   speed: 1
   AttackSpeed: 3
   PointsObject: {fileID: 0}
-  lowEnemy: {fileID: 0}
+  lowEnemy: {fileID: 11400000, guid: 0231459bda77aa64094514ed8d83c034, type: 2}
 --- !u!4 &6467562986644717270 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8435432675090055849, guid: ae1f247a669714548af148db975f40bc, type: 3}

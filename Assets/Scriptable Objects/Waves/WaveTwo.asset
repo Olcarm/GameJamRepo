@@ -12,7 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f6ce25ed0dedc34d8e5c5133e537c65, type: 3}
   m_Name: WaveTwo
   m_EditorClassIdentifier: 
-  <EnemiesInWave>k__BackingField:
+  <BlueEnemiesInWave>k__BackingField:
   - {fileID: 1556801540163361004, guid: 62a5e346a0d841242a36c8fae520dba1, type: 3}
+  - {fileID: 5947767372287599724, guid: a92cd752373887d48a768faccbf1db16, type: 3}
+  <BlueEnemyCosts>k__BackingField: 0100000005000000
+  <RedEnemiesInWave>k__BackingField: []
+  <RedEnemyCosts>k__BackingField: 
   <TimeBeforeThisWave>k__BackingField: 20
-  <NumbertToSpawn>k__BackingField: 20
+  EnemyTotalCost: 15

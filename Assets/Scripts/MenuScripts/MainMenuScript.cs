@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MainMenuScript : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class MainMenuScript : MonoBehaviour
     public GameObject mainButtons;
     public TextMeshProUGUI levelText;
     public TextMeshProUGUI pointsText;
+    public GameObject settings;
     [SerializeField]
     private Player player;
     public void Update()
@@ -32,6 +34,17 @@ public class MainMenuScript : MonoBehaviour
     {
         battle.SetActive(false);
         upgrades.SetActive(false);
+        settings.SetActive(false);
         mainButtons.SetActive(true);
+    }
+    public void Settings()
+    {
+        settings.SetActive(true);
+        mainButtons.SetActive(false);
+    }
+    public void StartGame()
+    {
+        BackToMain();
+        SceneManager.LoadScene("GameScene");
     }
 }

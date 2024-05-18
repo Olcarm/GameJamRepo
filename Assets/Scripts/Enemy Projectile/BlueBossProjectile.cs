@@ -16,22 +16,11 @@ public class BlueBossProjectile : MonoBehaviour
     void Start()
     {
         StartCoroutine(Fire());
-        StartCoroutine(SineBullet());
     }
 
     
     void Update()
     {
-        
-    }
-
-    IEnumerator SineBullet()
-    {
-        while(true)
-        {
-            Instantiate(bullet2, bulSpawnPos.transform.position, Quaternion.identity);
-            yield return new WaitForSeconds(1f);
-        }
         
     }
     IEnumerator Fire()

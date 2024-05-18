@@ -17,7 +17,9 @@ public class PlayerScript : MonoBehaviour
 
     [SerializeField]
     private Player playerStats;
-    // Start is called before the first frame update
+    [SerializeField]
+    private GameObject defeatScreen;
+    
     void Start()
     {
         maxHealth = playerStats.health;
@@ -25,7 +27,7 @@ public class PlayerScript : MonoBehaviour
         health = maxHealth;
     }
 
-    // Update is called once per frame
+    
     void FixedUpdate()
     {
 
@@ -55,10 +57,14 @@ public class PlayerScript : MonoBehaviour
     }
     public void TakeDamage(float damageTaken)
     {
-        playerStats.health -= damageTaken;
+        health -= damageTaken;
         if(health <= 0)
         {
             Destroy(this.gameObject);
+            Time.timeScale = 0;
+            defeatScreen.SetActive(true);
         }
     }
+
+
 }

@@ -21,12 +21,16 @@ public class WaveSpawner : MonoBehaviour
     public GameDifficulty difficulty;
     public float blueEnemyTotalCost = 0;
     public float redEnemyTotalCost = 0;
+    public GameObject victoryScreen;
+    private bool blueSpawning = false;
+    private bool redSpawning = false;
+    private float startTimer = 0;
+    public int enemiesAlive = 0;
     private void Awake()
     {
         currentWave = waves[i];
 
         timeBtwnSpawns = currentWave.TimeBeforeThisWave;
-
         if(difficulty.CurrentEnemy == 0)
         {
             blueEnemyTotalCost = currentWave.EnemyTotalCost;
@@ -40,12 +44,20 @@ public class WaveSpawner : MonoBehaviour
     }
     private void Update()
     {
-        
+
         if (stopSpawning)
         {
+            if(enemiesAlive <= 0 && blueSpawning ==false && redSpawning == false)
+            {
+                Time.timeScale = 0;
+                victoryScreen.SetActive(true);
+            }
+            
+
             return;
         }
-        if(Time.time >= timeBtwnSpawns)
+        startTimer += Time.deltaTime;
+        if(Time.time >= timeBtwnSpawns && startTimer >= 3)
         {
             StartCoroutine(BlueSpawnWave());
             StartCoroutine(RedSpawnWave());
@@ -68,10 +80,12 @@ public class WaveSpawner : MonoBehaviour
 
             Instantiate(currentWave.BlueEnemiesInWave[num], spawnpoints[num2].position, spawnpoints[num2].rotation);
             i += currentWave.BlueEnemyCosts[num];
-            
+            enemiesAlive += 1;
+            blueSpawning = true;
             yield return new WaitForSeconds(1);
-
+            
         }
+        blueSpawning = false;
     }
     IEnumerator RedSpawnWave()
     {
@@ -84,10 +98,12 @@ public class WaveSpawner : MonoBehaviour
 
             Instantiate(currentWave.RedEnemiesInWave[num], spawnpoints[num2].position, spawnpoints[num2].rotation);
             i += currentWave.RedEnemyCosts[num];
-
+            enemiesAlive += 1;
+            redSpawning = true;
             yield return new WaitForSeconds(1);
 
         }
+        redSpawning = false;
     }
 
     private void SetDifficulty(float currentEnemy)

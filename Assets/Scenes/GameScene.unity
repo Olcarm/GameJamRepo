@@ -1135,7 +1135,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1374066658}
         m_TargetAssemblyTypeName: VolumeSettings, Assembly-CSharp
         m_MethodName: SetSFXVolume
         m_Mode: 1
@@ -2517,7 +2517,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1374066658}
         m_TargetAssemblyTypeName: VolumeSettings, Assembly-CSharp
         m_MethodName: SetMusicVolume
         m_Mode: 1
@@ -4102,10 +4102,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ca82d601d7b5c04b80ab55859c67cb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  musicSounds: []
+  musicSounds:
+  - sound: Theme
+    clip: {fileID: 8300000, guid: cfaf128355209944685a968095ac35b2, type: 3}
   sfxSounds:
   - sound: PlayerAttack
     clip: {fileID: 8300000, guid: 3d72e6457cf880d44a91d67a40425fda, type: 3}
+  - sound: Destroyed
+    clip: {fileID: 8300000, guid: e6bcbf147f711404b9bdd73b61a8f3af, type: 3}
   musicSource: {fileID: 29369353}
   sfxSource: {fileID: 235824016}
 --- !u!1 &1720897418

@@ -39,6 +39,7 @@ public class BaseEnemy : MonoBehaviour
         if(health<=0)
         {
             Destroy(gameObject);
+            AudioManager.Instance.PlaySFX("Destroyed");
             GameObject.Find("WaveSpawner").GetComponent<WaveSpawner>().enemiesAlive -= 1;
         }
         
